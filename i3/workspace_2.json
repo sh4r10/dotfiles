@@ -1,0 +1,49 @@
+{
+    "border": "normal",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1039,
+       "width": 1717,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "load layout i3 - Google Search — Firefox Developer Edition",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^firefoxdeveloperedition$",
+       "instance": "^Navigator$",
+       "machine": "^archievous$",
+       "title": "^load\\ layout\\ i3\\ \\-\\ Google\\ Search\\ \\—\\ Firefox\\ Developer\\ Edition$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 600,
+       "width": 800,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "shariq@archievous:~",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Alacritty$",
+       "instance": "^Alacritty$",
+       "machine": "^archievous$",
+       "title": "^shariq\\@archievous\\:\\~$"
+       }
+    ],
+    "type": "con"
+}
+
