@@ -1,0 +1,6 @@
+prompt="Applications"
+allow_images=true
+matching=fuzzy
+insensitive=true
+no_actions=true
+width=30%
