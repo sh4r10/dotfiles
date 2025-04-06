@@ -207,6 +207,11 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- General keybinds
+vim.keymap.set('n', '<leader>ow', function()
+  vim.cmd 'WikiPages'
+end, { desc = '[O]pen [wiki] pages' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -454,6 +459,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>fw', builtin.buffers, { desc = '[ ] [F]ind in [w]iki files' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
@@ -477,6 +483,14 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- Shortcut for searching through wiki files
+      vim.keymap.set('n', '<leader>fw', function()
+        builtin.live_grep {
+          search_dirs = { '~/notes' },
+          prompt_title = 'Find notes from Wiki',
+        }
+      end, { desc = '[F]ind in [w]iki files' })
     end,
   },
 
